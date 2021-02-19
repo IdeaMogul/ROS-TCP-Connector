@@ -349,7 +349,7 @@ public class ROSConnection : MonoBehaviour
             {
                 if (!Application.isPlaying)
                     break;
-                tcpListener = new TcpListener(IPAddress.Parse(ip), port);
+                tcpListener = new TcpListener(IPAddress.Any, port);
                 tcpListener.Start();
 
                 Debug.Log("ROS-Unity server listening on " + ip + ":" + port);
